@@ -1,0 +1,67 @@
+{
+  "name": "dsh-cheerful",
+  "version": "0.1.0",
+  "description": "DSH 插件：给模型一个 cheer 工具，在 Web 界面左右两侧放礼炮喷彩带。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cheer",
+    "confetti",
+    "celebration",
+    "widget"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5.0.0",
+    "@deepseek-ai/dsh-tools": ">=0.2.1-rc.2 <0.3.0",
+    "@deepseek-ai/schemastery": ">=3.18.0 <4.0.0"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "node test/contract.test.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js && node test/contract.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mika-Maki/dsh-cheerful.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mika-Maki/dsh-cheerful/issues"
+  },
+  "homepage": "https://github.com/Mika-Maki/dsh-cheerful#readme",
+  "license": "MIT"
+}

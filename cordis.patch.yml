@@ -1,0 +1,6 @@
+# dsh-cheerful 组合包贡献的配置层。
+# insert 行的 name 在已安装形态必须是 npm 包名（走 Node 模块解析）；
+# config 省略，全部走插件自身默认值，用户可在 profile patch 里按 id 覆盖。
+- insert:
+    - id: cheerful
+      name: dsh-cheerful
